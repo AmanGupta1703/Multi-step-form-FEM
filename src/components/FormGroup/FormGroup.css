@@ -1,0 +1,32 @@
+.form__group:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.form__group-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form__label {
+  color: var(--color-primary-01);
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ERROR */
+.error {
+  color: var(--color-primary-05);
+  font-size: 1.2rem;
+  font-weight: 700;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.error.active {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,79 @@
+.term {
+  background-color: hsl(206, 94%, 87%, 0.2);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+/* BUTTON */
+.term__btn {
+  font-size: 1.2rem;
+}
+
+/* TOGGLE */
+.toggle {
+  --toggle-width: 4.5rem;
+  --toggle-height: 1.5rem;
+}
+
+.toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  cursor: pointer;
+  border-radius: 4rem;
+  background-color: var(--color-primary-01);
+  width: var(--toggle-width);
+  height: var(--toggle-height);
+  position: relative;
+  padding: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.switch::before {
+  content: '';
+  display: block;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: var(--toggle-height);
+  height: var(--toggle-height);
+  transition: all 0.3s ease;
+
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+}
+
+.toggle__input--checkbox:checked + .switch::before {
+  transform: translate(100%, -50%);
+}
+
+.term:not(:has(.toggle__input--checkbox:checked)) .term__btn--monthly {
+  font-weight: 600;
+  color: var(--color-primary-01);
+}
+
+.term:has(.toggle__input--checkbox:checked) .term__btn--yearly {
+  font-weight: 600;
+  color: var(--color-primary-01);
+}
+
+@media (min-width: 768px) {
+  .term {
+    margin-top: 3rem;
+    gap: 4rem;
+  }
+
+  .term__btn {
+    font-size: 1.4rem;
+  }
+}

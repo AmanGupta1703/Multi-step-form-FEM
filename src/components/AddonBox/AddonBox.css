@@ -1,0 +1,62 @@
+.add-ons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.add-ons-box {
+  border: 0.2rem solid hsl(231, 11%, 63%, 0.4);
+  border-radius: 0.5rem;
+  padding: 0.9rem;
+  transition: all 0.3s;
+}
+
+.add-ons-box:has(.add-ons__checkbox:checked) {
+  border-color: var(--color-primary-02);
+}
+
+.add-ons__label,
+.add-ons__info {
+  display: flex;
+}
+
+.add-ons__label {
+  cursor: pointer;
+  align-items: center;
+  gap: 2rem;
+}
+
+.add-ons__info {
+  flex-direction: column;
+  font-size: 1.3rem;
+}
+
+.add-ons__name {
+  color: var(--color-primary-01);
+  font-weight: 700;
+}
+
+.add-ons__info__text {
+  color: var(--color-nuetral-01);
+}
+
+.add-ons__price {
+  color: var(--color-primary-02);
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .add-ons-box {
+    padding: 1.5rem 2rem;
+  }
+
+  .add-ons__info {
+    font-size: 1.6rem;
+  }
+
+  .add-ons__price {
+    font-size: 1.4rem;
+  }
+}
